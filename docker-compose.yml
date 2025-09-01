@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres
+    container_name: db_salas
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  api:
+    build: .
+    container_name: api_salas
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_HOST=db
+      - DB_DATABASE=${DB_NAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=${DB_PORT}
+
+volumes:
+  postgres_data:

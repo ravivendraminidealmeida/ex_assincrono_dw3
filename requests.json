@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "Exercício DW3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Listar Salas",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/salasdeaula"
+      }
+    },
+    {
+      "name": "Criar Sala",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:4000/api/products",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"product\": {\n    \"name\": \"Lorem\",\n    \"description\": \"Ipsum\",\n    \"image_path\": \"http://google.com\",\n    \"available_quantity\": 10,\n    \"price\": 20.0    \n  }\n}  ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Atualizar Sala",
+      "event": [],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": "http://localhost:3000/api/salasdeaula/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"descricao\": \"Lorem\",\n  \"localizacao\": \"Ipsum Alterado\",\n  \"capacidade\": 10\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Deletar Sala",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:300/api/salasdeaula"
+      }
+    },
+    {
+      "name": "Consultar Sala",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/salasdeaula/1"
+      }
+    }
+  ],
+  "variable": []
+}
